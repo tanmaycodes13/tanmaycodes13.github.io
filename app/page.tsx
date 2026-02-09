@@ -1,65 +1,166 @@
-import Image from "next/image";
+"use client"
+
+import { Button } from "@/components/ui/Button";
+import Link from "next/link";
+import { CareerTimeline } from "@/components/sections/CareerTimeline";
+import { Contact } from "@/components/sections/Contact";
+import { Github, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
+import { TechStack } from "@/components/sections/TechStack";
+
+// Import Google Font for cursive style
+import { Dancing_Script } from "next/font/google";
+
+const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
+      {/* Hero Section */}
+      <section className="min-h-screen flex flex-col justify-center items-start container mx-auto px-4 md:px-6 relative overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="z-10 max-w-2xl space-y-8"
+        >
+          {/* Simple greeting */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="flex items-center gap-3"
+          >
+            <motion.div
+              animate={{ rotate: [0, 10, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+              className="text-4xl"
+            >
+              👋
+            </motion.div>
+            <span className="text-lg text-muted-foreground">Hi, I'm</span>
+          </motion.div>
+          
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="text-6xl font-black tracking-tight sm:text-7xl md:text-8xl leading-none text-foreground"
+          >
+            Tanmay
+          </motion.h1>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="text-lg text-muted-foreground md:text-xl max-w-[600px] leading-relaxed"
+          >
+            I build and automate scalable cloud infrastructure.
+            <br />
+            Specializing in <span className="text-primary font-semibold">Platform Engineering</span>, <span className="text-primary font-semibold">Backend Systems</span>, and <span className="text-primary font-semibold">DevOps</span>.
+          </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
+            className="flex flex-wrap items-center gap-4"
+          >
+            <Link href="#journey">
+              <Button size="lg" className="group">
+                View Journey
+                <motion.span
+                  className="ml-1 inline-block"
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  →
+                </motion.span>
+              </Button>
+            </Link>
+            <Link href="#contact">
+              <Button variant="outline" size="lg">
+                Get in Touch
+              </Button>
+            </Link>
+            
+            {/* Inline social icons */}
+            <div className="flex items-center gap-2 ml-2">
+              <Link href="https://github.com/tanmaycodes13" target="_blank" rel="noopener noreferrer">
+                <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.95 }}>
+                  <Button variant="ghost" size="icon" className="h-10 w-10">
+                    <Github className="h-5 w-5" />
+                  </Button>
+                </motion.div>
+              </Link>
+              <Link href="https://www.linkedin.com/in/tanmay-7a0806173/" target="_blank" rel="noopener noreferrer">
+                <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.95 }}>
+                  <Button variant="ghost" size="icon" className="h-10 w-10">
+                    <Linkedin className="h-5 w-5" />
+                  </Button>
+                </motion.div>
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* Quick stats */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2, duration: 0.6 }}
+            className="flex flex-wrap gap-6 pt-4 border-t border-border/40"
+          >
+            <div className="space-y-1">
+              <div className="text-2xl font-bold text-primary">3+</div>
+              <div className="text-xs text-muted-foreground uppercase tracking-wider">Years Exp</div>
+            </div>
+            <div className="space-y-1">
+              <div className="text-2xl font-bold text-primary">0→1</div>
+              <div className="text-xs text-muted-foreground uppercase tracking-wider">Products Built</div>
+            </div>
+            <div className="space-y-1">
+              <div className="text-2xl font-bold text-primary">∞</div>
+              <div className="text-xs text-muted-foreground uppercase tracking-wider">Problems Solved</div>
+            </div>
+          </motion.div>
+        </motion.div>
+        
+        {/* Animated Background Shapes with Parallax */}
+        <motion.div
+          animate={{
+            y: [0, -20, 0],
+            rotate: [0, 180, 360],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl -z-10 pointer-events-none"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+        <motion.div
+          animate={{
+            y: [0, 20, 0],
+            rotate: [0, -180, -360],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[300px] h-[300px] bg-secondary/30 rounded-full blur-3xl -z-10 pointer-events-none"
+        />
+        
+        {/* Tech Stack Icons */}
+        <TechStack />
+      </section>
+
+      {/* Career Timeline Section */}
+      <CareerTimeline />
+
+      {/* Contact Section */}
+      <Contact />
     </div>
   );
 }
