@@ -129,7 +129,7 @@ export function Navbar() {
       <Modal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} title="Resume">
         <div className="w-full h-[80vh]">
           <iframe 
-            src="https://drive.google.com/file/d/1TUznJupEjuBJRqT7WtsOsBUnwGY170da/preview" 
+            src="https://drive.google.com/file/d/17GiYMGVePXwQFOahVUSQDZS-t1_z-mdV/preview" 
             className="w-full h-full border-0"
             title="Resume"
           />
