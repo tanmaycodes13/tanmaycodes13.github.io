@@ -21,6 +21,8 @@ const timeline: TimelineEvent[] = [
     type: "current",
     icon: Award,
     highlights: [
+      "Built an AI-powered CI/CD log summarization system using Amazon Bedrock, automatically analyzing and summarizing pipeline logs across 500+ daily builds"
+      "Optimized LLM inference cost by integrating LiteLLM for request routing and budget control and applying Drain-based log template parsing, reducing token usage by  ̃60%"
       "Optimized database performance: 50% reduction in aggregation pipeline time, 60% improvement in scan/return ratios",
       "Migrated authentication to OAuth 2.0/OIDC framework using Okta with SAML Bearer assertion",
       "Deployed SonarQube from scratch into CI/CD pipeline, enforcing code quality gates",
