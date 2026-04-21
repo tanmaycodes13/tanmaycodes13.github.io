@@ -1,0 +1,202 @@
+[
+    {
+        "slug": "kubernetes-hpa-deep-dive",
+        "title": "Kubernetes HPA Deep Dive: Scaling Beyond CPU",
+        "description": "A practical guide to Kubernetes Horizontal Pod Autoscaler, covering CPU, memory, and custom metrics scaling with real examples.",
+        "tags": [
+            "kubernetes",
+            "scaling",
+            "platform-engineering"
+        ]
+    },
+    {
+        "slug": "terraform-state-management",
+        "title": "Terraform State Management Patterns That Actually Work",
+        "description": "How to structure Terraform state for multi-environment, multi-team projects without losing your mind.",
+        "tags": [
+            "terraform",
+            "infrastructure",
+            "devops"
+        ]
+    },
+    {
+        "slug": "github-actions-cicd-pipeline",
+        "title": "Building a Production CI/CD Pipeline with GitHub Actions",
+        "description": "A step-by-step guide to building a robust CI/CD pipeline with GitHub Actions that handles testing, building, and deploying.",
+        "tags": [
+            "ci-cd",
+            "github-actions",
+            "devops"
+        ]
+    },
+    {
+        "slug": "postgres-query-optimization",
+        "title": "PostgreSQL Query Optimization: From Slow to Sub-Millisecond",
+        "description": "Practical techniques for optimizing PostgreSQL queries, understanding EXPLAIN plans, and choosing the right indexes.",
+        "tags": [
+            "postgres",
+            "backend",
+            "performance"
+        ]
+    },
+    {
+        "slug": "container-networking-demystified",
+        "title": "Container Networking Demystified: Bridges, Overlays, and CNI",
+        "description": "Understanding how containers talk to each other, from Linux bridges to Kubernetes CNI plugins.",
+        "tags": [
+            "docker",
+            "networking",
+            "kubernetes"
+        ]
+    },
+    {
+        "slug": "prometheus-grafana-monitoring",
+        "title": "Prometheus and Grafana: Building Observability from Scratch",
+        "description": "A hands-on guide to setting up Prometheus and Grafana for monitoring your infrastructure and applications.",
+        "tags": [
+            "observability",
+            "monitoring",
+            "devops"
+        ]
+    },
+    {
+        "slug": "gitops-with-argocd",
+        "title": "GitOps with ArgoCD: Declarative Deployments Done Right",
+        "description": "How to implement GitOps workflows using ArgoCD for Kubernetes deployments with automatic sync and rollbacks.",
+        "tags": [
+            "gitops",
+            "argocd",
+            "kubernetes"
+        ]
+    },
+    {
+        "slug": "linux-cgroups-namespaces",
+        "title": "Linux Cgroups and Namespaces: The Foundation of Containers",
+        "description": "Understanding the Linux primitives that make containers possible, with hands-on examples.",
+        "tags": [
+            "linux",
+            "containers",
+            "platform-engineering"
+        ]
+    },
+    {
+        "slug": "api-rate-limiting-patterns",
+        "title": "API Rate Limiting Patterns: Token Buckets, Sliding Windows, and Beyond",
+        "description": "How to implement effective rate limiting for your APIs using different algorithms and when to use each.",
+        "tags": [
+            "backend",
+            "api-design",
+            "performance"
+        ]
+    },
+    {
+        "slug": "docker-multi-stage-builds",
+        "title": "Docker Multi-Stage Builds: Shrinking Images the Right Way",
+        "description": "A practical guide to using multi-stage Docker builds to create minimal, secure production images.",
+        "tags": [
+            "docker",
+            "devops",
+            "security"
+        ]
+    },
+    {
+        "slug": "nginx-reverse-proxy-guide",
+        "title": "Nginx as a Reverse Proxy: The Complete Practical Guide",
+        "description": "Everything you need to know about using Nginx as a reverse proxy, from basic proxying to load balancing and TLS termination.",
+        "tags": [
+            "nginx",
+            "infrastructure",
+            "backend"
+        ]
+    },
+    {
+        "slug": "database-migration-strategies",
+        "title": "Database Migration Strategies for Zero-Downtime Deployments",
+        "description": "How to run schema migrations without taking your application offline, covering expand-contract patterns and feature flags.",
+        "tags": [
+            "postgres",
+            "backend",
+            "devops"
+        ]
+    },
+    {
+        "slug": "kubernetes-rbac-guide",
+        "title": "Kubernetes RBAC: Locking Down Your Cluster Without Locking Out Your Team",
+        "description": "A practical approach to Kubernetes Role-Based Access Control that balances security with developer productivity.",
+        "tags": [
+            "kubernetes",
+            "security",
+            "platform-engineering"
+        ]
+    },
+    {
+        "slug": "redis-caching-patterns",
+        "title": "Redis Caching Patterns for Backend Engineers",
+        "description": "Cache-aside, write-through, write-behind, and other Redis caching patterns with practical implementation examples.",
+        "tags": [
+            "redis",
+            "backend",
+            "performance"
+        ]
+    },
+    {
+        "slug": "helm-charts-from-scratch",
+        "title": "Writing Helm Charts from Scratch: A Practical Walkthrough",
+        "description": "How to create, template, and manage Helm charts for Kubernetes deployments with real-world patterns.",
+        "tags": [
+            "kubernetes",
+            "helm",
+            "devops"
+        ]
+    },
+    {
+        "slug": "grpc-vs-rest-when-to-use",
+        "title": "gRPC vs REST: When to Use Which and Why",
+        "description": "A practical comparison of gRPC and REST APIs, covering performance, developer experience, and real-world trade-offs.",
+        "tags": [
+            "backend",
+            "api-design",
+            "grpc"
+        ]
+    },
+    {
+        "slug": "vault-secrets-management",
+        "title": "HashiCorp Vault for Secrets Management: A Getting Started Guide",
+        "description": "How to set up and use HashiCorp Vault to manage secrets, with Docker Compose examples and application integration.",
+        "tags": [
+            "security",
+            "vault",
+            "devops"
+        ]
+    },
+    {
+        "slug": "opensearch-logging-pipeline",
+        "title": "Building a Logging Pipeline with OpenSearch and Fluent Bit",
+        "description": "A hands-on guide to centralized logging using OpenSearch and Fluent Bit, from collection to dashboards.",
+        "tags": [
+            "observability",
+            "logging",
+            "infrastructure"
+        ]
+    },
+    {
+        "slug": "webhook-design-patterns",
+        "title": "Designing Reliable Webhooks: Retries, Signatures, and Idempotency",
+        "description": "How to build webhook systems that are reliable, secure, and debuggable, from both producer and consumer perspectives.",
+        "tags": [
+            "backend",
+            "api-design",
+            "architecture"
+        ]
+    },
+    {
+        "slug": "systemd-service-management",
+        "title": "Systemd for Application Deployments: Beyond the Basics",
+        "description": "Using systemd to manage long-running services, with unit files, resource limits, and automatic restarts.",
+        "tags": [
+            "linux",
+            "devops",
+            "infrastructure"
+        ]
+    }
+]
