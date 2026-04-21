@@ -25,7 +25,7 @@ if (!GITHUB_TOKEN) {
     process.exit(1);
 }
 
-const MODEL = "openai/gpt-4o";
+const MODEL = "gpt-4o";
 const API_URL = "https://models.inference.ai.azure.com/chat/completions";
 
 // ---------------------------------------------------------------------------
